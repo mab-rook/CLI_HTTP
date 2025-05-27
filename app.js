@@ -9,10 +9,10 @@ if(command === 'create'){
         console.log('creating a file');
         process.exit(1);
     }
-    const filePath = path.join(__dirname, filename);
+    const filePath = path.join(__dirname, filename1);
     fs.writeFile(filePath, content, 'utf-8')
     .then(() => {
-        console.log(`File ${filename} created successfully!`);
+        console.log(`File ${filename1} created successfully!`);
     })
     .catch(err => {
         console.error(`Error creating file: ${err}`);
@@ -22,7 +22,7 @@ if(command === 'create'){
         console.log('reading a file');
         process.exit(1);
     }
-    const filePath = path.join(__dirname, filename);
+    const filePath = path.join(__dirname, filename1);
     fs.readFile(filePath, 'utf-8')
     .then(data => {
         console.log(data);
